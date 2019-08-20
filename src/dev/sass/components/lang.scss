@@ -1,0 +1,29 @@
+.toggle-lang {
+    display: flex;
+    position: relative;
+    align-items: center;
+    
+    &__item {
+        margin: 0 15px;
+        font-family: 'Agavantgardecyr', sans-serif;
+        font-size: 1.125rem;
+        letter-spacing: 0.12rem;
+        text-transform: uppercase;
+        color: #484848;
+
+        &--active {
+            color: #FFF5F5;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        height: 13px;
+        width: 1px;
+        background-color: #949494;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+    }
+}

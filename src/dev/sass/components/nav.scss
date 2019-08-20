@@ -1,0 +1,95 @@
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    transform: translateX(-100%);
+    color: $black;
+    padding: 0 70px;
+    transition: ease-out 0.3s;
+
+    &__close {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        transition: ease-out 0.2s;
+
+        & div {
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: $black;
+
+            &:first-child {
+                transform: rotate(-45deg);
+            }
+
+            &:last-child {
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__item {
+        font-family: 'Agavantgardecyr', sans-serif;
+        color: inherit;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.0625rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin: 25px 0;
+        position: relative;
+        color: #686666;
+        transition: linear 0.2s;
+
+        &:after {
+            content: '';
+            position: absolute;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+            height: 2px;
+            width: 43px;
+            background-color: #D2D2D2;
+            bottom: -24px;
+        }
+
+        &:last-child {
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &--open {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,43 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+
+block content
+
+	.catalog
+		.vertical-title
+			div
+			div
+			div
+			div
+			span design
+		.catalog__container.b-container
+			.filter
+				.filter__item web design
+				.filter__item banner
+				.filter__item product design
+				.filter__item logotype
+			.catalog__items
+				.card
+					.card__title travel agency
+					img(src="img/work1.png" alt="").card__image
+				.card
+					.card__title travel agency
+					img(src="img/work1.png" alt="").card__image
+				.card
+					.card__title travel agency
+					img(src="img/work1.png" alt="").card__image
+				.card
+					.card__title travel agency
+					img(src="img/work1.png" alt="").card__image
+				.card
+					.card__title travel agency
+					img(src="img/work1.png" alt="").card__image
+				.card
+					.card__title travel agency
+					img(src="img/work1.png" alt="").card__image
+			a(href="#").catalog__more more
+
+block script

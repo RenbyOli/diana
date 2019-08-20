@@ -1,0 +1,14 @@
+.burger {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 39px;
+
+    & div {
+        height: 2px;
+        width: 100%;
+        background-color: $white;
+        margin: 2.5px 0;
+    }
+}
