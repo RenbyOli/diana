@@ -1,0 +1,38 @@
+.vertical-title {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    transform: rotate(-90deg) translateY(100%) translateX(-100%);
+    transform-origin: left bottom;
+    font-size: 1.625rem;
+    line-height: 1.875rem;
+    letter-spacing: 0.53rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    & div {
+        height: 1px;
+        background-color: $white;
+
+        &:first-child {
+            width: 59px;
+            margin-right: 10px;
+        }
+
+        &:nth-child(2) {
+            width: 19px;
+            margin-right: 8px;
+        }
+
+        &:nth-child(3) {
+            width: 33px;
+            margin-right: 11px;
+        }
+
+        &:nth-child(4) {
+            width: 5px;
+            margin-right: 20px;
+        }
+    }
+}

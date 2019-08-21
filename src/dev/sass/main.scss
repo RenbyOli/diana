@@ -49,6 +49,12 @@ img {
   vertical-align: bottom;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 ul,
 ol {
   list-style-type: none;
@@ -67,6 +73,10 @@ input::-ms-clear {
 @import 'components/logo.scss';
 @import 'components/billboard.scss';
 @import 'components/nav.scss';
+@import 'components/catalog.scss';
+@import 'components/filter.scss';
+@import 'components/card.scss';
+@import 'components/vertical-title.scss';
 
 #particles-js {
   position: absolute;
