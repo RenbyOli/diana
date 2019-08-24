@@ -65,6 +65,11 @@
         color: #686666;
         transition: linear 0.2s;
 
+        &--active {
+            color: $black;
+            cursor: default;
+        }
+
         &:after {
             content: '';
             position: absolute;
@@ -91,5 +96,9 @@
 
     &--open {
         transform: translateX(0);
+    }
+
+    @media (max-width:620px) {
+        width: 100vw;
     }
 }

@@ -1,5 +1,17 @@
 window.addEventListener('load', function() {
 
+    function headerFixed(headerClass, fixedHeaderClass, topInterval) {
+        var header = document.querySelector('.' + headerClass);
+        window.addEventListener('scroll', function() {
+            if(document.documentElement.scrollTop > topInterval) {
+                header.classList.add(fixedHeaderClass);
+            } else {
+                header.classList.remove(fixedHeaderClass);
+            }
+        })
+    }
+    headerFixed('header', 'header--fixed', 50);
+
     particlesJS.load('particles-js', 'assets/particles.json', function() {
         console.log('callback - particles.js config loaded');
     });
@@ -37,7 +49,20 @@ window.addEventListener('load', function() {
             })
         }
     }
-
     setMarginToCard();
+
+    //Аккардеон на странице работ
+
+    function filterAcc() {
+        let btn = document.querySelector('.filter-acc__title');
+        let menu = document.querySelector('.filter-acc__menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('filter-acc__menu--open');
+            btn.classList.toggle('filter-acc__title--open');
+        });
+    }
+
+    filterAcc();
 
 })

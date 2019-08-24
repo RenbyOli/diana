@@ -18,21 +18,53 @@
         &:first-child {
             width: 59px;
             margin-right: 10px;
+
+            @media (max-width:1260px) {
+                width: 74px;
+                margin-right: 19px;
+            }
         }
 
         &:nth-child(2) {
             width: 19px;
             margin-right: 8px;
+
+            @media (max-width:1260px) {
+                position: absolute;
+                width: 4px;
+                left: 0;
+                top: 4px;
+                transform: rotate(-45deg);
+            }
         }
 
         &:nth-child(3) {
             width: 33px;
             margin-right: 11px;
+
+            @media (max-width:1260px) {
+                position: absolute;
+                width: 4px;
+                left: 0;
+                top: 8px;
+                transform: rotate(45deg);
+            }
         }
 
         &:nth-child(4) {
             width: 5px;
             margin-right: 20px;
+
+            @media (max-width:1260px) {
+                display: none;
+            }
         }
+    }
+
+    @media (max-width:1260px) {
+        font-size: 0.75rem;
+        line-height: 0.875rem;
+        color: #6B6B6B;
+        left: 10px;
     }
 }
