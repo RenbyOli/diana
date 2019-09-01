@@ -32,5 +32,13 @@
   "author": "",
   "license": "ISC",
   "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RenbyOli/diana.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RenbyOli/diana/issues"
+  },
+  "homepage": "https://github.com/RenbyOli/diana#readme",
   "description": ""
 }

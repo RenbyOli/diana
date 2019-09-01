@@ -65,4 +65,22 @@ window.addEventListener('load', function() {
 
     filterAcc();
 
+    //Rand size illustration blocks
+
+    var items = document.querySelectorAll('.illustration__item');
+    var n = 0;
+    var j = 0;
+    
+    items.forEach((item, i) => {
+        n++;
+        if( i%6 == 0 && i !== 0) n--;
+        if( (n%2 == 0) || n == 0) {
+            item.classList.add('illustration__item--big');
+            if( j > 5) {
+                item.style.marginTop = '-55px';
+            }
+        }
+        if( j == 12 ) j = 0;
+        j++;
+    })
 })

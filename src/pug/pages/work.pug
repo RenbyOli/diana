@@ -1,0 +1,34 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+
+block content
+
+	.work
+		.work__container.b-container
+			.work__content
+				.work__left
+					.card
+						.card__title travel agency
+						img(src="img/work1.png" alt="").card__image
+				.work__right
+					.work__title кОРПОРАТИВНЫЙ САЙТ ДЛЯ ТУРИСТИЧЕСКОГО АГЕНТСТВА
+					.work__description
+						p Явные признаки победы институционализации и по сей день остаются уделом либералов, которые жаждут быть подвергнуты целой серии независимых исследований. Есть над чем задуматься: представители современных социальных резервов являются только методом политического участия и объявлены нарушающими общечеловеческие нормы этики и морали.
+						p Явные признаки победы институционализации и по сей день остаются уделом либералов, которые жаждут быть подвергнуты целой серии независимых исследований. Есть над чем задуматься: представители современных социальных резервов являются только.
+					.work__play.link Play video
+			.work__preview
+				.work__icons
+					.work__icon
+						img(src="img/icon1.png", alt="")
+					.work__icon
+						img(src="img/icon2.png", alt="")
+					.work__icon
+						img(src="img/icon3.png", alt="")
+				.work__screenshot
+					img(src="/", alt="")
+				a(href="#").link.work__link link to site
+
+block script
