@@ -23,10 +23,12 @@ window.addEventListener('load', function() {
 
         btn.addEventListener('click', () => {
             nav.classList.add(openNavClass);
+            document.querySelector('body').style = 'height:100%;overflow:hidden';
         })
 
         close.addEventListener('click', () => {
             nav.classList.remove(openNavClass);
+            document.querySelector('body').style = '';
         })
     }
     openNavMenu('#openNav', '#nav', 'nav--open', '#closeNav');
@@ -57,30 +59,61 @@ window.addEventListener('load', function() {
         let btn = document.querySelector('.filter-acc__title');
         let menu = document.querySelector('.filter-acc__menu');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('filter-acc__menu--open');
-            btn.classList.toggle('filter-acc__title--open');
-        });
+        if(btn !== null) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('filter-acc__menu--open');
+                btn.classList.toggle('filter-acc__title--open');
+            });
+        }
     }
-
     filterAcc();
 
     //Rand size illustration blocks
+    function superCards(countElRow) {
+        let blocks = document.querySelectorAll('.illustration__items');
+        let windowWidth = document.documentElement.clientWidth;
 
-    var items = document.querySelectorAll('.illustration__item');
-    var n = 0;
-    var j = 0;
-    
-    items.forEach((item, i) => {
-        n++;
-        if( i%6 == 0 && i !== 0) n--;
-        if( (n%2 == 0) || n == 0) {
-            item.classList.add('illustration__item--big');
-            if( j > 5) {
-                item.style.marginTop = '-55px';
-            }
+        if(windowWidth < 1023 && windowWidth > 620) {
+            countElRow = countElRow - 2;
+        } if(windowWidth < 620) {
+            countElRow = countElRow - 4;
         }
-        if( j == 12 ) j = 0;
-        j++;
+    
+        blocks.forEach((item) => {
+            let n = 0,
+                j = 0;
+
+            item.querySelectorAll('.illustration__item').forEach((item, i) => {
+                n++;
+                if( i%countElRow == 0 && i !== 0) n--;
+                if( (n%2 == 0) || n == 0) {
+                    item.classList.add('illustration__item--big');
+                    if( j > countElRow-1) {
+                        item.style.marginTop = '-55px';
+                    }
+                }
+                if( j == countElRow*2 ) j = 0;
+                j++;
+            })
+        })
+    }
+    superCards(6);
+
+    //Blog cards
+
+    let articlePreview = document.querySelectorAll('.blog__preview');
+    let h = 1;
+    articlePreview.forEach((item, i) => {
+        if(h > 4) h = 1
+
+        if(h<=2) {
+            item.classList.add('blog__preview--left');
+        }
+        if(h>2 && h<=4) {
+            item.classList.add('blog__preview--right');
+        }
+        
+        h++;
     })
+
 })

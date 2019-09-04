@@ -1,0 +1,75 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+
+block content
+
+	.blog
+		.vertical-title
+				div
+				div
+				div
+				div
+				span blog
+		.blog__container.b-container
+			.filter
+				.filter__item.filter__item--active all
+				.filter__item Celebrities
+				.filter__item my character
+				.filter__item abstraction
+				.filter__item portraits
+			.filter-acc
+				.filter-acc__title web design
+					.filter-acc__arrow
+						+svg('triang')
+				.filter-acc__menu
+					.filter-acc__items
+						.filter-acc__item banner
+						.filter-acc__item product design
+						.filter-acc__item logotype
+			.blog__items
+				.blog__item
+					.blog__date 4.08.2019
+					.blog__preview
+						img(src="img/article.jpg", alt="")
+					.blog__title Топ-5 трендов графического дизайна 2019 года
+				.blog__item
+					.blog__date 4.08.2019
+					.blog__preview
+						img(src="img/article.jpg", alt="")
+					.blog__title Топ-5 трендов графического дизайна 2019 года
+				.blog__item
+					.blog__date 4.08.2019
+					.blog__preview
+						img(src="img/article.jpg", alt="")
+					.blog__title Топ-5 трендов графического дизайна 2019 года
+				.blog__item
+					.blog__date 4.08.2019
+					.blog__preview
+						img(src="img/article.jpg", alt="")
+					.blog__title Топ-5 трендов графического дизайна 2019 года
+				.blog__item
+					.blog__date 4.08.2019
+					.blog__preview
+						img(src="img/article.jpg", alt="")
+					.blog__title Топ-5 трендов графического дизайна 2019 года
+				.blog__item
+					.blog__date 4.08.2019
+					.blog__preview
+						img(src="img/article.jpg", alt="")
+					.blog__title Топ-5 трендов графического дизайна 2019 года
+				.blog__item
+					.blog__date 4.08.2019
+					.blog__preview
+						img(src="img/article.jpg", alt="")
+					.blog__title Топ-5 трендов графического дизайна 2019 года
+				.blog__item
+					.blog__date 4.08.2019
+					.blog__preview
+						img(src="img/article.jpg", alt="")
+					.blog__title Топ-5 трендов графического дизайна 2019 года
+			.blog__more more
+
+block script

@@ -7,13 +7,22 @@
         margin: 64px auto 0;
         padding-top: 60px;
         position: relative;
+
+        @media (max-width:1023px) {
+            margin-top: 30px;
+            padding-left: 30px;
+            padding-top: 35px;
+        }
     }
 
     &__year {
         position: absolute;
         top: 0;
-        right: -40px;
-        font-size: 0.875rem;
+        right: -35px;
+
+        @media (max-width:1023px) {
+            right: 0;
+        }
     }
 
     &__items {
@@ -21,6 +30,10 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         margin: -12.5px;
+
+        @media (max-width:1023px) {
+            margin: -10px;
+        }
     }
 
     &__item {
@@ -50,5 +63,19 @@
             bottom: 14px;
             border: 1px solid $white;
         }
+
+        @media (max-width:1023px) {
+            width: calc(25% - 20px);
+            margin: 10px;
+        }
+
+        @media (max-width:620px) {
+            width: calc(50% - 20px);
+            margin: 10px;
+        }
+    }
+
+    @media (max-width:1023px) {
+        margin-top: 60px;
     }
 }

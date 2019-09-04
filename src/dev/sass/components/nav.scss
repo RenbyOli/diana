@@ -43,6 +43,11 @@
         &:hover {
             transform: rotate(180deg);
         }
+
+        @media (max-width:1023px) {
+            top: 20px;
+            right: 20px;
+        }
     }
 
     &__items {

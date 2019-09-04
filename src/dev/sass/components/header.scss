@@ -15,4 +15,8 @@
         background-color: $black;
         padding: 10px 38px;
     }
+
+    @media (max-width:1023px) {
+        padding: 10px;
+    }
 }
