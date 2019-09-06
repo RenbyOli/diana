@@ -12,6 +12,17 @@
     padding: 0 70px;
     transition: ease-out 0.3s;
 
+    &__close-zone {
+        width: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: ease-out 0.3s;
+    }
+
     &__close {
         position: absolute;
         top: 50px;
@@ -30,6 +41,7 @@
             height: 2px;
             width: 100%;
             background-color: $black;
+            pointer-events: none;
 
             &:first-child {
                 transform: rotate(-45deg);
@@ -101,6 +113,11 @@
 
     &--open {
         transform: translateX(0);
+
+        & .nav__close-zone {
+            width: 100vw;
+            opacity: 1;
+        }
     }
 
     @media (max-width:620px) {

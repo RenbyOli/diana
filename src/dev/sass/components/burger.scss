@@ -10,5 +10,19 @@
         width: 100%;
         background-color: $white;
         margin: 2.5px 0;
+        transition: ease-in-out 0.2s;
+
+        &:nth-child(2) {
+            opacity: 0;
+            margin: -1px 0;
+        }
+    }
+
+    &:hover {
+
+        & div {
+            margin: 3px 0;
+            opacity: 1;
+        }
     }
 }

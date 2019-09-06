@@ -32,6 +32,16 @@ body {
   word-wrap: break-word;
 }
 
+.b-page {
+  background-image: url(../img/bg.png);
+  background-position: 50% 0;
+  background-size: 100% auto;
+
+  &--main {
+    background-image: none;
+  }
+}
+
 .b-container {
   width: 100%;
   max-width: 1480px;
@@ -108,6 +118,7 @@ input::-ms-clear {
 @import './components/work.scss';
 @import './components/illustration.scss';
 @import './components/blog.scss';
+@import './components/article.scss';
 
 #particles-js {
   position: absolute;

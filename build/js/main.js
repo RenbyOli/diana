@@ -18,17 +18,19 @@ window.addEventListener('load', function() {
 
     function openNavMenu(btnSelector, navSelector, openNavClass, closeNavSelector) {
         let btn = document.querySelector(btnSelector),
-            nav = document.querySelector(navSelector),
-            close = document.querySelector(closeNavSelector);
+            nav = document.querySelector(navSelector);
 
         btn.addEventListener('click', () => {
             nav.classList.add(openNavClass);
             document.querySelector('body').style = 'height:100%;overflow:hidden';
         })
 
-        close.addEventListener('click', () => {
-            nav.classList.remove(openNavClass);
-            document.querySelector('body').style = '';
+        nav.addEventListener('click', (e) => {
+            console.log(e.target.classList.contains('nav__close-zone'));
+            if(e.target.getAttribute('id') == 'closeNav' || e.target.classList.contains('nav__close-zone')) {
+                nav.classList.remove(openNavClass);
+                document.querySelector('body').style = '';
+            }
         })
     }
     openNavMenu('#openNav', '#nav', 'nav--open', '#closeNav');
