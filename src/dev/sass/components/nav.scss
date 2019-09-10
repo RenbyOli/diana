@@ -6,7 +6,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $white;
     transform: translateX(-100%);
     color: $black;
     padding: 0 70px;
@@ -21,6 +20,17 @@
         opacity: 0;
         background-color: rgba(0, 0, 0, 0.7);
         transition: ease-out 0.3s;
+    }
+
+    &__bg {
+        position: absolute;
+        background-color: $white;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 0 50% 50% 0;
+        transition: 0.2s 0.2s cubic-bezier(.3,2.1,.58,.55);
     }
 
     &__close {
@@ -117,6 +127,10 @@
         & .nav__close-zone {
             width: 100vw;
             opacity: 1;
+        }
+
+        & .nav__bg {
+            border-radius: 0;
         }
     }
 
