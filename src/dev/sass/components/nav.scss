@@ -16,7 +16,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 100%;
+        left: 50%;
         opacity: 0;
         background-color: rgba(0, 0, 0, 0.7);
         transition: ease-out 0.3s;
@@ -28,9 +28,9 @@
         top: 0;
         right: 0;
         bottom: 0;
-        left: 0;
+        left: -20%;
         border-radius: 0 50% 50% 0;
-        transition: 0.2s 0.2s cubic-bezier(.3,2.1,.58,.55);
+        transition: 0.3s 0.3s cubic-bezier(.2,2.1,.58,.55);
     }
 
     &__close {
