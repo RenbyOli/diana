@@ -68,4 +68,14 @@
         left: 10px;
         top: 0;
     }
+
+    &--article {
+
+        @media (max-width:1023px) {
+            left: auto;
+            right: 30px;
+            top: -110px;
+            transform-origin: right top;
+        }
+    }
 }

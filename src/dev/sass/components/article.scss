@@ -4,6 +4,10 @@
     
     &__container {
         max-width: 1260px;
+
+        @media (max-width:1023px) {
+            padding-right: 25px;
+        }
     }
 
     &__date {
@@ -61,16 +65,31 @@
 
                         & + p {
                             margin-top: 20px;
+
+                            @media (max-width:1023px) {
+                                margin-top: 10px;
+                            }
+                        }
+
+                        @media (max-width:1023px) {
+                            margin-top: 15px;
                         }
                     }
+                }
+
+                @media (max-width:1260px) {
+                    order: 2;
+                    margin-top: 30px;
                 }
             }
 
             & div:last-child {
                 position: relative;
+                left: 60px;
 
                 & div:first-child {
                     max-width: 540px;
+                    width: 100%;
                     height: 430px;
                     padding: 0 0 25px 25px;
                     position: relative;
@@ -91,6 +110,10 @@
                         bottom: 0;
                         border: 1px solid #FBFAFA;
                     }
+
+                    @media (max-width:1023px) {
+                        height: 300px;
+                    }
                 }
 
                 & div:last-child {
@@ -98,7 +121,7 @@
                     width: 100%;
                     height: 385px;
                     position: absolute;
-                    left: calc(100% - 50px);
+                    left: calc(100% - 100px);
                     top: -100px;
                     padding: 35px;
                     border: 1px solid #FBFAFA;
@@ -108,23 +131,58 @@
                         height: 100%;
                         object-fit: cover;
                     }
+
+                    @media (max-width:1260px) {
+                        display: none;
+                    }
+                }
+
+                @media (max-width:1260px) {
+                    order: 1;
+                }
+
+                @media (max-width:1260px) {
+                    left: 0;
                 }
             }
 
             & + div {
                 margin-top: 65px;
+
+                @media (max-width:1023px) {
+                    margin-top: 30px;       
+                }
             }
 
             &:nth-child(even) {
                 flex-direction: row-reverse;
 
                 & div:last-child {
+                    left: -60px;
 
                     & div:last-child {
                         left: calc(-100% + 70px);
                     }
+
+                    @media (max-width:1023px) {
+                        left: 0;
+                    }
+                }
+
+                @media (max-width:1260px) {
+                    flex-direction: column;
+                    align-items: flex-start; 
                 }
             }
+
+            @media (max-width:1260px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width:1023px) {
+            margin-top: 50px;
         }
     }
 }
