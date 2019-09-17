@@ -1,0 +1,33 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page';
+
+block content
+
+	.contacts
+		.vertical-title.vertical-title--article
+				div
+				div
+				div
+				div
+				span My contacts
+		.contacts__container.b-container
+			.contacts__left
+				.contacts__item
+					.contacts__name E-mail
+					a(href="#").contacts__value leto_2013@bk.ru
+				.contacts__item
+					.contacts__name social networks
+					a(href="#").contacts__value.contacts__value--social Vkontakte
+					a(href="#").contacts__value.contacts__value--social Instagram
+			.contacts__right
+				.form
+					.form__title feedback form
+					form(action="/")
+						textarea(name="message" placeholder="describe feedback").form__message
+						input(type="text" name="name" placeholder="name").form__input
+						input(type="email" name="email" placeholder="e-mail").form__input
+						button(type="submit").form__submit submit
+block script

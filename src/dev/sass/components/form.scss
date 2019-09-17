@@ -1,0 +1,59 @@
+.form {
+
+    &__title {
+        font-family: 'Agavantgardecyr', sans-serif;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+        letter-spacing: 0.12rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    & form {
+        color: $white;
+        border: 1px solid $white;
+        margin-top: 27px;
+        padding: 30px 30px 50px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input,
+    &__message {
+        border: 1px solid $white;
+        background: transparent;
+        letter-spacing: 0.53rem;
+        text-transform: uppercase;
+        color: $white;
+        width: 100%;
+    }
+
+    &__message {
+        height: 105px;
+        padding-left: 15px;
+        padding-top: 20px;
+    }
+
+    &__input {
+        margin-top: 27px;
+        height: 44px;
+        padding-left: 15px;
+    }
+
+    &__submit {
+        border: 1px solid $white;
+        font-family: 'Agavantgardecyr', sans-serif;
+        align-self: flex-end;
+        margin-top: 39px;
+        max-width: 195px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        letter-spacing: 0.53rem;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
