@@ -17,6 +17,15 @@
         padding: 30px 30px 50px 30px;
         display: flex;
         flex-direction: column;
+
+        @media (max-width:1023px) {
+            margin-top: 20px;
+        }
+
+        @media (max-width:500px) {
+            padding: 20px 20px 35px 20px;
+            margin-top: 20px;
+        }
     }
 
     &__input,
@@ -39,9 +48,14 @@
         margin-top: 27px;
         height: 44px;
         padding-left: 15px;
+
+        @media (max-width:1023px) {
+            margin-top: 20px;
+        }
     }
 
     &__submit {
+        color: $white;
         border: 1px solid $white;
         font-family: 'Agavantgardecyr', sans-serif;
         align-self: flex-end;
@@ -55,5 +69,42 @@
         letter-spacing: 0.53rem;
         text-transform: uppercase;
         cursor: pointer;
+        position: relative;
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 17px;
+            right: -13px;
+            transition: ease-out 0.2s;
+        }
+
+        &:after {
+            height: 1px;
+            width: 55px;
+            background-color: $white;
+        }
+
+        &:before {
+            width: 8px;
+            height: 8px;
+            transform-origin: bottom right;
+            border-right: 1px solid $white;
+            border-bottom: 1px solid $white;
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+
+            &:after,
+            &:before {
+                right: -20px;
+            }
+        }
+
+        @media (max-width:1023px) {
+            margin-top: 30px;
+        }
     }
 }
