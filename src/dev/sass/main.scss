@@ -130,3 +130,8 @@ input::-ms-clear {
   bottom: 0;
   left: 0;
 }
+
+.invert-color {
+  filter: invert(100%);
+  background-color: $white;
+}
