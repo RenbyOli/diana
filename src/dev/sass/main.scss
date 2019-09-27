@@ -135,3 +135,7 @@ input::-ms-clear {
   filter: invert(100%);
   background-color: $white;
 }
+
+.lg-backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}

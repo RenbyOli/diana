@@ -93,7 +93,11 @@
         margin-top: 29px;
         width: 100%;
         background-color: $white;
-        height: 100vh; /*-------*/
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
 
         @media (max-width:1023px) {
             margin-top: 15px;

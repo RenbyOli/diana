@@ -118,4 +118,17 @@ window.addEventListener('load', function() {
         h++;
     })
 
+    //Gallery
+
+    function gallery(selector) {
+        let item = document.querySelectorAll(selector);
+
+        item.forEach((item, i) => {
+            item.setAttribute('id', 'galleryBlock' + i);
+            lightGallery(document.querySelector('#' + item.getAttribute('id')));
+        });
+    }
+
+    gallery('.illustration__items');
+
 })
