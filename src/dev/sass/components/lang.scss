@@ -27,4 +27,22 @@
         right: 0;
         left: 0;
     }
+
+    @media (max-width:767px) {
+        display: none;
+    }
+
+    &--mobile {
+        position: absolute;
+        bottom: 30px;
+        display: none;
+        justify-content: center;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+
+        @media (max-width:767px) {
+            display: flex;
+        }
+    }
 }

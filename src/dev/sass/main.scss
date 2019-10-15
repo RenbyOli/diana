@@ -18,7 +18,7 @@ html {
   line-height: 24px;
     
     @include breakpoint($max1023) {
-        font-size: 0.875rem;
+        font-size: 14px;
         line-height: 20px;
     }
 }
@@ -30,15 +30,24 @@ body {
   overflow: hidden;
   background-color: $black;
   word-wrap: break-word;
+  font-size: 1rem;
 }
 
 .b-page {
   background-image: url(../img/bg.png);
   background-position: 50% 0;
   background-size: 100% auto;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 90px;
 
   &--main {
     background-image: none;
+  }
+
+  @media (max-width:1023px) {
+    padding-bottom: 70px;
   }
 }
 
@@ -137,5 +146,39 @@ input::-ms-clear {
 }
 
 .lg-backdrop {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.lg-toolbar {
+  background-color: rgba(0,0,0,0);
+}
+
+.lg-actions .lg-prev {
+  left: 15vw;
+
+  @media (max-width:1023px) {
+    left: 5vw;    
+  }
+}
+
+.lg-actions .lg-next {
+  right: 15vw;
+
+  @media (max-width:1023px) {
+    right: 5vw;    
+  }
+}
+
+.lg-close.lg-icon {
+  position: absolute;
+  right: 15vw;
+
+  @media (max-width:1023px) {
+    right: 5vw;    
+  }
+}
+
+.lg-download {
+  display: none;
 }

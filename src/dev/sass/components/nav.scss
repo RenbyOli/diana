@@ -84,7 +84,7 @@
         text-decoration: none;
         text-align: center;
         font-size: 1.125rem;
-        line-height: 1.0625rem;
+        line-height: 1.25rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         margin: 25px 0;
@@ -136,5 +136,6 @@
 
     @media (max-width:620px) {
         width: 100vw;
+        padding: 0 30px;
     }
 }

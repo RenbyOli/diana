@@ -1,6 +1,5 @@
 .blog {
     margin-top: 114px;
-    overflow: hidden;
     position: relative;
 
     &__container {
@@ -126,6 +125,7 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         padding-left: 15px;
+        color: rgba(255, 255, 255, 0.7);
     }
 
     &__more {

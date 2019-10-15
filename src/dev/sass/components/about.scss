@@ -17,6 +17,7 @@
         position: relative;
         margin-right: 15px;
         flex-shrink: 2;
+        filter: invert(100%);
 
         @media (max-width:1023px) {
             display: flex;
