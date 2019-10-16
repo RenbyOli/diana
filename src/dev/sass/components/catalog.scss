@@ -45,6 +45,9 @@
         max-width: 60px;
         text-align: center;
         position: relative;
+        background: transparent;
+        color: inherit;
+        padding: 0;
 
         &:after {
             content: '';

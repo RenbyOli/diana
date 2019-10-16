@@ -13,8 +13,18 @@
         position: relative;
         color: #484848;
 
-        &--active {
-            color: $white;
+        & input {
+
+            & + span {
+                transition: ease-in-out 0.2s;
+            }
+
+            &:checked {
+
+                & + span {
+                    color: $white;
+                }
+            }
         }
 
         &:after {
