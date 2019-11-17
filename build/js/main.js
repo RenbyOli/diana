@@ -126,9 +126,40 @@ window.addEventListener('load', function() {
         item.forEach((item, i) => {
             item.setAttribute('id', 'galleryBlock' + i);
             lightGallery(document.querySelector('#' + item.getAttribute('id')));
+            item.style.pointerEvents = 'all';
         });
     }
 
     gallery('.illustration__items');
+
+    // Ulyot
+
+    function ulyot() {
+        let items = document.querySelectorAll('.ulyot');
+        let borders = document.querySelectorAll('.ulyot-border');
+
+        items.forEach((item, i) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                //document.querySelector('.b-page').classList.add('b-page--ulyot');
+
+                item.style = 'top: 0; left: 0;position:fixed; width:100vw; height:100vh; transition-duration: 1s';
+
+                // setTimeout(() => {
+                //     borders.forEach((item, i) => {
+                //         item.style.transitionDuration = borders.length*100 - i*100 + 'ms';
+                //         item.style.borderWidth = 3 + i + 'px';
+                //         item.classList.add('ulyot-border--tr');
+                //     });
+                //     location.assign(item.getAttribute('href'));
+                //     },
+                //     300
+                // );
+                
+            });
+        });
+    }
+
+    ulyot();
 
 })

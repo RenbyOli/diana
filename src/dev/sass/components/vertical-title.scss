@@ -1,7 +1,7 @@
 .vertical-title {
     position: absolute;
     top: -30px;
-    left: 50px;
+    left: 10px;
     transform: rotate(-90deg) translateY(100%) translateX(-100%);
     transform-origin: left bottom;
     font-size: 1.625rem;
@@ -62,20 +62,14 @@
     }
 
     @media (max-width:1260px) {
-        font-size: 0.75rem;
-        line-height: 0.875rem;
-        color: #6B6B6B;
+        font-size: 1rem;
+        line-height: 0.9rem;
+        color: rgb(167, 167, 167);
         left: 10px;
         top: 0;
     }
 
-    &--article {
-
-        @media (max-width:1023px) {
-            left: auto;
-            right: 30px;
-            top: -110px;
-            transform-origin: right top;
-        }
+    @media (max-width:1023px) {
+        display: none;
     }
 }

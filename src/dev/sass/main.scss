@@ -36,14 +36,25 @@ body {
 .b-page {
   background-image: url(../img/bg.png);
   background-position: 50% 0;
-  background-size: 100% auto;
+  background-size: cover;
   overflow: hidden;
   min-height: 100vh;
   position: relative;
   padding-bottom: 90px;
+  transition: ease-out 0.5s;
+  transform-origin: center;
+
+  &--ulyot {
+    transform: scale(0);
+    height: 100vh;
+  }
 
   &--main {
     background-image: none;
+  }
+
+  &--srv {
+    background-image: url(../img/bg-two.png);
   }
 
   @media (max-width:1023px) {
@@ -131,6 +142,9 @@ input::-ms-clear {
 @import './components/form.scss';
 @import './components/contacts.scss';
 @import './components/about.scss';
+@import './components/thanks.scss';
+@import './components/notfound.scss';
+@import './components/agreement.scss';
 
 #particles-js {
   position: absolute;
@@ -181,4 +195,51 @@ input::-ms-clear {
 
 .lg-download {
   display: none;
+}
+
+/////
+
+.ulyot-border {
+  position: fixed;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  border: 3px solid $white;
+  transition: ease-out;
+
+  &:nth-child(0) {
+    border-color: rgb(255, 0, 0);
+  }
+  &:nth-child(1) {
+    border-color: rgb(255, 130, 0);
+  }
+  &:nth-child(2) {
+    border-color: rgb(255, 255, 0);
+  }
+  &:nth-child(3) {
+    border-color: rgb(130, 255, 0);
+  }
+  &:nth-child(4) {
+    border-color: rgb(0, 255, 130);
+  }
+  &:nth-child(5) {
+    border-color: rgb(0, 255, 255);
+  }
+  &:nth-child(6) {
+    border-color: rgb(0, 130, 255);
+  }
+  &:nth-child(7) {
+    border-color: rgb(0, 0, 255);
+  }
+  &:nth-child(8) {
+    border-color: rgb(130, 0, 255);
+  }
+  &:nth-child(9) {
+    border-color: rgb(255, 0, 255);
+  }
+
+  &--tr {
+    transform: scale(0);
+  }
 }
